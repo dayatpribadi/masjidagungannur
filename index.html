@@ -701,6 +701,7 @@
         const surahNames = [];
 
         // Ambil daftar surah dari API
+        // Ambil daftar surah dari API
         fetch("https://api.alquran.cloud/v1/surah")
             .then(res => res.json())
             .then(data => {
@@ -724,20 +725,24 @@
                     const li = document.createElement("li");
                     li.setAttribute("data-cover", "assets/images/audio-cover.jpg");
                     li.setAttribute("data-artist", `(${reciter.name})`);
-
                     li.innerHTML = `
-            <a href="${audioUrl}" title="Surah ${surahNames[surahNum]}" onclick="playAudio('${audioUrl}'); return false;">
-              ${surahNames[surahNum]}
-            </a>
-          `;
-
+                <a href="${audioUrl}" title="Surah ${surahNames[surahNum]}">${surahNames[surahNum]}</a>
+            `;
                     playlistContainer.appendChild(li);
+                });
+
+                // ✅ Inisialisasi player JIKA semua li sudah dimasukkan
+                $(".plyr.v2").musicPlayer({
+                    autoPlay: false,
+                    loop: false,
+                    volume: 80
                 });
             })
             .catch(err => {
                 playlistContainer.innerHTML = "<li>❌ Gagal memuat murotal</li>";
                 console.error(err);
             });
+
 
         function shuffle(arr) {
             for (let i = arr.length - 1; i > 0; i--) {
