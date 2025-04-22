@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="icon" href="assets/images/favicon.png" sizes="35x35" type="image/png">
+    <title>Masjid An Nur Pemkab Ogan Ilir</title>
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.bootstrap-touchspin.min.css">
+    <link rel="stylesheet" href="assets/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+</head>
+
+<body>
+    <main>
+        <div id="preloader">
+            <div class="preloader-inner">
+                <i class="preloader-icon thm-clr flaticon-kaaba"></i>
+            </div>
+        </div><!-- Page Loader -->
+        <header class="stick style2 w-100">
+            <div class="topbar bg-color1 d-flex flex-wrap justify-content-between w-100">
+                <div class="topbar-left">
+                    <ul class="topbar-info-list mb-0 list-unstyled d-inline-flex">
+                        <li><i class="thm-clr far fa-envelope"></i><a href="javascript:void(0);"
+                                title="">info@masjidannuroganilir.com</a></li>
+                        <li><i class="thm-clr fas fa-phone-alt"></i>+62 821 xxx xxxx</li>
+                    </ul>
+                </div>
+                <div class="topbar-right d-inline-flex">
+                    <ul class="topbar-info-list mb-0 list-unstyled d-inline-flex">
+                        <li><i class="thm-clr flaticon-mosque-1"></i>Waktu saat ini: <span class="thm-clr"
+                                id="realTime"></span>
+                        </li>
+                    </ul>
+                    <div class="social-links d-inline-flex">
+                        <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div><!-- Topbar -->
+            <div class="logo-menu-wrap v2 d-flex flex-wrap align-items-center justify-content-between w-100 pat-bg thm-layer opc65 back-blend-multiply thm-bg"
+                style="background-image: url(assets/images/pattern-bg.jpg);">
+                <div class="logo">
+                    <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid"
+                                src="assets/images/logo/logo_annur.png" alt="Logo"
+                                srcset="assets/images/logo/logo_annur.png"></a></h1>
+                </div><!-- Logo -->
+                <nav class="d-flex flex-wrap align-items-center justify-content-between">
+                    <div class="header-left">
+                        <ul class="mb-0 list-unstyled d-inline-flex">
+                            <li><a href="index.html" title="">Beranda</a></li>
+                            <li><a href="about.html" title="">Tentang</a></li>
+                            <li><a href="jadwalsalat.html" title="">Jadwal Salat</a></li>
+                            <li><a href="Galeri.html" title="">Galeri</a></li>
+                            <li><a href="contact.html" title="">Kontak</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div><!-- Logo Menu Wrap -->
+        </header><!-- Header -->
+        <div class="sticky-menu">
+            <div class="container">
+                <div class="sticky-menu-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+                    <div class="logo">
+                        <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid"
+                                    src="assets/images/logo/logo_annur.png" alt="Logo"
+                                    srcset="assets/images/logo/logo_annur.png"></a></h1>
+                    </div><!-- Logo -->
+                    <nav class="d-flex flex-wrap align-items-center justify-content-between">
+                        <div class="header-left">
+                            <ul class="mb-0 list-unstyled d-inline-flex">
+                                <li><a href="index.html" title="">Beranda</a></li>
+                                <li><a href="about.html" title="">Tentang</a></li>
+                                <li><a href="jadwalsalat.html" title="">Jadwal Salat</a></li>
+                                <li><a href="Galeri.html" title="">Galeri</a></li>
+                                <li><a href="contact.html" title="">Kontak</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div><!-- Sticky Menu -->
+        <div class="rspn-hdr">
+            <div class="rspn-mdbr">
+                <div class="rspn-scil">
+                    <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <form class="rspn-srch">
+                    <input type="text" placeholder="Enter Your Keyword">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="lg-mn">
+                <div class="logo"><a href="index.html" title="Home"><img src="assets/images/logo/logo_annur.png"
+                            alt="Logo"></a>
+                </div>
+                <div class="rspn-cnt">
+                    <span><i class="thm-clr far fa-envelope"></i><a href="javascript:void(0);"
+                            title="">info@youremailid.com</a></span>
+                    <span><i class="thm-clr fas fa-phone-alt"></i>+96 125 554 24 5</span>
+                </div>
+                <span class="rspn-mnu-btn"><i class="fa fa-list-ul"></i></span>
+            </div>
+            <div class="rsnp-mnu">
+                <span class="rspn-mnu-cls"><i class="fa fa-times"></i></span>
+                <ul class="mb-0 list-unstyled w-100">
+                    <li><a href="index.html" title="">Beranda</a></li>
+                    <li><a href="about.html" title="">Tentang</a></li>
+                    <li><a href="jadwalsalat.html" title="">Jadwal Salat</a></li>
+                    <li><a href="Galeri.html" title="">Galeri</a></li>
+                    <li><a href="contact.html" title="">Kontak</a></li>
+                </ul>
+            </div><!-- Responsive Menu -->
+        </div><!-- Responsive Header -->
+        <section>
+            <div class="w-100 position-relative">
+                <div class="time-wrap2 w-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 col-sm-12 col-lg-4">
+                            <div class="time-title w-100">
+                                <h4 class="mb-0">Jadwal Sholat Hari Ini </h4>
+                                <p class="mb-0 thm-clr">
+                                    <span id="tanggal"></span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-8">
+                            <ul class="time-list2 d-flex flex-wrap w-100 mb-0 list-unstyled" id="jadwal">
+                                Memuat...
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- Time Wrap -->
+            </div>
+        </section>
+        <section>
+            <div class="w-100 position-relative">
+                <div class="feat-wrap v2 position-relative w-100">
+                    <div class="feat-caro">
+                        <div class="feat-item v2">
+                            <div class="feat-img position-absolute"
+                                style="background-image: url(assets/images/masjid_annur_03.jpg);"></div>
+                            <div class="feat-cap-wrap position-absolute d-inline-block">
+                                <div class="feat-cap left-icon d-inline-block">
+                                    <i class="d-inline-block flaticon-rub-el-hizb thm-clr"></i>
+                                    <h2 class="mb-0">Selamat Datang,</h2>
+                                    <p class="mb-0">Masjid Agung Annur Pemerintah Daerah Kabupaten Ogan Ilir</p>
+                                    <a class="thm-btn thm-bg" href="about.html"
+                                        title="">Profil<span></span><span></span><span></span><span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feat-item v2">
+                            <div class="feat-img position-absolute"
+                                style="background-image: url(assets/images/masjid_annur_02.jpg);"></div>
+                            <div class="feat-cap-wrap position-absolute d-inline-block">
+                                <div class="feat-cap left-icon d-inline-block">
+                                    <i class="d-inline-block flaticon-rub-el-hizb thm-clr"></i>
+                                    <h2 class="mb-0">Nothing Is Impossible With Allah</h2>
+                                    <p class="mb-0">Consectetur adipiscing elit duis volutpat ligula nulla dapibus.</p>
+                                    <a class="thm-btn thm-bg" href="about.html" title="">Take A
+                                        Tour<span></span><span></span><span></span><span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feat-item v2">
+                            <div class="feat-img position-absolute"
+                                style="background-image: url(assets/images/masjid_01.jpg);"></div>
+                            <div class="feat-cap-wrap position-absolute d-inline-block">
+                                <div class="feat-cap left-icon d-inline-block">
+                                    <i class="d-inline-block flaticon-rub-el-hizb thm-clr"></i>
+                                    <h2 class="mb-0">Islam is an Abrahamic Monotheistic Religion</h2>
+                                    <p class="mb-0">Consectetur adipiscing elit duis volutpat ligula nulla dapibus.</p>
+                                    <a class="thm-btn thm-bg" href="about.html" title="">Take A
+                                        Tour<span></span><span></span><span></span><span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Featured Area Wrap -->
+            </div>
+        </section>
+        <section>
+            <div class="w-100 position-relative">
+                <div class="container">
+                    <div class="plyr-wrp v2 overlap45 overlap-45 w-100">
+                        <div class="row mrg">
+                            <div class="col-md-12 col-sm-12 col-lg-4">
+                                <h3 class="mb-0 text-center pat-bg thm-layer opc65 back-blend-multiply thm-bg"
+                                    style="background-image: url(assets/images/pattern-bg.jpg);">Murrotal Alquran
+                                </h3>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-8">
+                                <div class="plyr-inner position-relative pat-bg white-layer opc9 back-blend-multiply bg-white"
+                                    style="background-image: url(assets/images/pattern-bg.jpg);">
+                                    <div class="plyr v2 w-100">
+                                        <ul class="playlist mb-0 list-unstyled">
+                                            <li data-cover="assets/images/audio-cover.jpg"
+                                                data-artist="(Abd-ur Rahman)"><a href="assets/audio/surah-fateh.mp3"
+                                                    title="">Surah Fath</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="w-100 pt-155 pb-90 position-relative">
+                <img class="img-fluid sec-top-mckp position-absolute" src="assets/images/sec-top-mckp2.png"
+                    alt="Sec Top Mockup 2">
+                <div class="container">
+                    <div class="about-wrap2 w-100">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 col-lg-5">
+                                <div class="about-title w-100">
+                                    <h2 class="mb-0">Tentang Masjid Agung An Nur</h2>
+                                    <p class="mb-0 thm-clr">Masjid Agung An Nur Pemerintah Daerah Kabupaten Ogan Ilir
+                                    </p>
+                                    <a class="thm-btn bg-color1" href="about.html"
+                                        title="">Selengkapnya<span></span><span></span><span></span><span></span></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-lg-7">
+                                <div class="about-inner2 w-100">
+                                    <img class="img-fluid" src="assets/images/bism-img2.png" alt="Bismillah Image">
+                                    <p class="mb-0">The is not just a mosque for prayers rather it is a community center
+                                        for all. The Center is committed to preserving an Islamic identity, building and
+                                        supporting a viable.</p>
+                                    <p class="mb-0">Muslim community, promoting a comprehensive Islamic way of life
+                                        based on the Holy Quran and the Sunnah of Prophet Muhammad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- About Wrap 2 -->
+                    <div class="video-quote-wrap mt-100 w-100 position-relative">
+                        <div class="video-box w-100 position-relative">
+                            <img class="img-fluid w-100" src="assets/images/masjid_05.png" alt="Video Image">
+                            <a class="position-absolute spinner bg-color1"
+                                href="https://youtu.be/eo9KSXw_h5U?si=Iwn7zF1fnQMl1A8l" data-fancybox title=""><i
+                                    class="fas fa-play"></i></a>
+                        </div>
+                        <div class="quote-box position-absolute pat-bg thm-layer opc65 back-blend-multiply thm-bg"
+                            style="background-image: url(assets/images/pattern-bg.jpg);">
+                            <p class="mb-0">The saying fruitful were let for him all fruitful morning. Second may waters
+                                set was were there upon his he winged won’t itself there very first under seasons.</p>
+                            <h4 class="mb-0">Masjid An-Nur</h4>
+                            <span class="d-block">2025</span>
+                        </div>
+                    </div><!-- Video Quote Wrap -->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="w-100 pt-110 paralx-52 black-layer pb-110 opc7 position-relative">
+                <div class="fixed-bg" style="background-image: url(assets/images/masjid_01.jpg);"></div>
+                <img class="img-fluid sec-btm-mckp sec-btm-140 position-absolute" src="assets/images/sec-top-mckp3.png"
+                    alt="Sec Top Mockup 3">
+                <div class="container">
+                    <div class="sec-title v2 text-center w-100">
+                        <div class="sec-title-inner d-inline-block">
+                            <i class="flaticon-rub-el-hizb thm-clr"></i>
+                            <h1 class="mb-0">Petugas Salat Jumat</h1>
+                            <p class="mb-0">Masjid Agung An-Nur Pemerintah Daerah Kabupaten Ogan Ilir.</p>
+                        </div>
+                    </div><!-- Sec Title -->
+                    <div class="serv-wrap2 res-row w-100">
+                        <div class="row">
+                            <div class="prod-wrap overlap-150 prod-caro w-100">
+                                <div class="prod-box d-block w-100">
+                                    <div class="row mrg">
+                                        <div class="col-md-6 col-sm-12 col-lg-6">
+                                            <div class="prod-img overflow-hidden position-relative w-100">
+                                                <img class="img-fluid w-100" src="assets/images/annur/petugas_jumat.png"
+                                                    alt="Product Image 1">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12 col-lg-6">
+                                            <div class="prod-info w-100">
+                                                <h3 class="mb-3"><a href="#" title="">Petugas Sholat Jumat Masjid Agung
+                                                        An-Nur</a></h3>
+                                                <a href="#" type="button"
+                                                    class="mb-3 course-detail-info-bottom d-flex flex-wrap align-items-center justify-content-between pat-bg gray-layer opc85 position-relative back-blend-multiply gray-bg"
+                                                    style="background-image: url(assets/images/pattern-bg.jpg);">
+                                                    <div class="d-inline-flex course-scholar">
+                                                        <img class="img-fluid rounded-circle"
+                                                            src="assets/images/logo/annur_logo.png">
+                                                        <div class="course-scholar-inner">
+                                                            <h5 class="mb-0">Download PDF</h5>
+                                                            <span class="d-block thm-clr">Petugas Salat Jumat
+                                                                Lengkap</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div><!-- Products Wrap -->
+                        </div>
+                    </div><!-- Services Wrap 2 -->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="w-100 pt-140 pb-110 position-relative">
+                <div class="container">
+                    <div class="event-sermon-wrap w-100">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-7">
+                                <div class="sec-title left-icon w-100">
+                                    <div class="sec-title-inner d-inline-block">
+                                        <i class="flaticon-rub-el-hizb thm-clr"></i>
+                                        <h2 class="mb-0">Jadwal Kuliah Subuh</h2>
+                                        <p class="mb-0 thm-clr">Masjid Agung An-Nur</p>
+                                    </div>
+                                </div><!-- Sec Title -->
+                                <div class="event-wrap2 w-100">
+                                    <div class="event-caro">
+                                        <div class="event-list-box d-flex flex-wrap align-items-center w-100">
+                                            <div class="event-img2 overflow-hidden position-relative"><a
+                                                    href="event-detail.html" title=""><img class="img-fluid w-100"
+                                                        src="assets/images/resources/event-mini-img1-1.jpg"
+                                                        alt="Event Mini Image 1"></a></div>
+                                            <div class="event-info2">
+                                                <h3 class="mb-0"><a href="event-detail.html" title="">10 Things you are
+                                                        Missing if you don't Understand the Quran</a></h3>
+                                                <ul class="event-meta mb-0 list-unstyled d-inline-flex flex-wrap">
+                                                    <li class="thm-clr"><i class="far fa-calendar"></i>22 July, 2020 @
+                                                        20:00:00</li>
+                                                    <li class="thm-clr"><i class="fas fa-location-arrow"></i>The Grand
+                                                        Mosque</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="event-list-box d-flex flex-wrap align-items-center w-100">
+                                            <div class="event-img2 overflow-hidden position-relative"><a
+                                                    href="event-detail.html" title=""><img class="img-fluid w-100"
+                                                        src="assets/images/resources/event-mini-img1-2.jpg"
+                                                        alt="Event Mini Image 2"></a></div>
+                                            <div class="event-info2">
+                                                <h3 class="mb-0"><a href="event-detail.html" title="">8 Things to
+                                                        Strengthen the Husband-Wife Relationship in Islam</a></h3>
+                                                <ul class="event-meta mb-0 list-unstyled d-inline-flex flex-wrap">
+                                                    <li class="thm-clr"><i class="far fa-calendar"></i>25 July, 2020 @
+                                                        20:00:00</li>
+                                                    <li class="thm-clr"><i class="fas fa-location-arrow"></i>The Grand
+                                                        Mosque</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="event-list-box d-flex flex-wrap align-items-center w-100">
+                                            <div class="event-img2 overflow-hidden position-relative"><a
+                                                    href="event-detail.html" title=""><img class="img-fluid w-100"
+                                                        src="assets/images/resources/event-mini-img1-3.jpg"
+                                                        alt="Event Mini Image 3"></a></div>
+                                            <div class="event-info2">
+                                                <h3 class="mb-0"><a href="event-detail.html" title="">Moveth the Seed
+                                                        you Waters is Replenish Light One Meat</a></h3>
+                                                <ul class="event-meta mb-0 list-unstyled d-inline-flex flex-wrap">
+                                                    <li class="thm-clr"><i class="far fa-calendar"></i>19 July, 2020 @
+                                                        20:00:00</li>
+                                                    <li class="thm-clr"><i class="fas fa-location-arrow"></i>The Grand
+                                                        Mosque</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="event-list-box d-flex flex-wrap align-items-center w-100">
+                                            <div class="event-img2 overflow-hidden position-relative"><a
+                                                    href="event-detail.html" title=""><img class="img-fluid w-100"
+                                                        src="assets/images/resources/event-mini-img1-4.jpg"
+                                                        alt="Event Mini Image 4"></a></div>
+                                            <div class="event-info2">
+                                                <h3 class="mb-0"><a href="event-detail.html" title="">8 Things to
+                                                        Strengthen the Husband-Wife Relationship in Islam</a></h3>
+                                                <ul class="event-meta mb-0 list-unstyled d-inline-flex flex-wrap">
+                                                    <li class="thm-clr"><i class="far fa-calendar"></i>10 June, 2020 @
+                                                        20:00:00</li>
+                                                    <li class="thm-clr"><i class="fas fa-location-arrow"></i>The Grand
+                                                        Mosque</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="events.html" title="">See More Events<i
+                                            class="fas fa-angle-double-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-lg-5">
+                                <div class="sec-title left-icon w-100">
+                                    <div class="sec-title-inner d-inline-block">
+                                        <i class="flaticon-rub-el-hizb thm-clr"></i>
+                                        <h2 class="mb-0">Kuliah Subuh Hari Ini</h2>
+                                        <p class="mb-0 thm-clr">Hadirilah dan Syiarkanlah</p>
+                                    </div>
+                                </div><!-- Sec Title -->
+                                <div class="sermon-wrap w-100">
+                                    <div class="sermon-box w-100">
+                                        <div class="sermon-info w-100 position-relative pat-bg thm-layer opc65 back-blend-multiply thm-bg"
+                                            style="background-image: url(assets/images/pattern-bg.jpg);">
+                                            <p class="mb-0">Sabtu, 29 Maret 2025</p>
+                                            <h3 class="mb-0"><a href="sermons-detail.html" title="">Makna Takbir Hari
+                                                    Raya Idul Fitri dan Amalan-amalan Sunnahnya</a></h3>
+                                            <p class="mb-0">K.H. Agus Jaya, Lc.,M.Hum.</p>
+                                            <div class="sermon-btns d-inline-flex">
+                                                <a href="https://www.youtube.com/embed/WxuHBTES2-s" data-fancybox
+                                                    title=""><i class="fas fa-video"></i></a>
+                                                <a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/111725286&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                                                    data-fancybox title=""><i class="fas fa-volume-up"></i></a>
+                                                <a href="assets/pdf/book.pdf" title="" target="_blank"><i
+                                                        class="far fa-file"></i></a>
+                                            </div>
+                                            <span class="position-absolute bg-color1">Kuliah Subuh</span>
+                                        </div>
+                                        <div class="sermon-img overflow-hidden position-relative w-100">
+                                            <a href="sermons-detail.html" title=""><img class="img-fluid w-100"
+                                                    src="assets/images/annur/annur_2.png" alt="Sermon Image 1"></a>
+                                        </div>
+                                    </div>
+                                </div><!-- Sermons Wrap -->
+                            </div>
+                        </div>
+                    </div><!-- Event & Sermon Wrap 2 -->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="w-100 pt-140 black-layer pb-150 opc7 position-relative">
+                <div class="fixed-bg" style="background-image: url(assets/images/masjid_annur_02.jpg);"></div>
+                <div class="container">
+                    <div class="month-donat-wrap text-center w-100">
+                        <div class="month-donat-inner d-inline-block">
+                            <i class="thm-clr flaticon-rub-el-hizb"></i>
+                            <h2 class="mb-0">وَاَقِيْمُوا الصَّلٰوةَ وَاٰتُوا الزَّكٰوةَ وَارْكَعُوْا مَعَ الرّٰكِعِيْنَ
+                            </h2>
+                            <p class="mb-0">"Tegakkanlah sholat, tunaikanlah zakat, dan rukuklah beserta orang-orang
+                                yang rukuk." (QS. Al Baqarah : 43)</p>
+                        </div>
+                    </div><!-- Monthly Donate Wrap -->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="w-100 pt-100 pb-210 position-relative">
+                <img class="img-fluid sec-top-mckp position-absolute" src="assets/images/sec-top-mckp2.png"
+                    alt="Sec Top Mockup 2">
+                <!-- <img class="sec-btm-mckp img-fluid position-absolute" src="assets/images/sec-botm-mckp2.png"
+                    alt="Sec Bottom Mockup 2"> -->
+                <div class="container">
+                    <div class="sec-title text-center w-100">
+                        <div class="sec-title-inner d-inline-block">
+                            <i class="flaticon-rub-el-hizb thm-clr"></i>
+                            <h2 class="mb-0">Berita An-Nur</h2>
+                            <p class="mb-0">Berita dan informasi seputar kegiatan masjid An-nur</p>
+                        </div>
+                    </div><!-- Sec Title -->
+                    <div class="blog-wrap2 w-100">
+                        <div class="post-box2 position-relative d-flex flex-wrap align-items-center w-100">
+                            <div class="post-img2 overflow-hidden position-absolute">
+                                <a href="blog-detail.html" title=""><img class="img-fluid w-100"
+                                        src="assets/images/annur/annur_1.png" alt="Blog Image 1"></a>
+                            </div>
+                            <div class="post-info2">
+                                <div class="post-info2-inner text-center">
+                                    <div class="post-date2">
+                                        <span class="d-block">11</span>
+                                        <i class="d-block thm-bg">April 2025</i>
+                                    </div>
+                                    <div class="post-meta4 w-100">
+                                        <span class="d-block"><i class="far fa-eye"></i>50 Views</span>
+                                        <span class="d-block"><i class="far fa-thumbs-up"></i>23</span>
+                                        <span class="d-block"><i class="far fa-comment"></i>30</span>
+                                    </div>
+                                </div>
+                                <ul class="post-meta2 d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
+                                    <li class="thm-clr">Tanjung Senai</li>
+                                    <li class="thm-clr"><img class="img-fluid rounded-circle"
+                                            src="assets/images/resources/post-author-thumb1-1.jpg"
+                                            alt="Post Author Thumb 1">Oleh: <a href="javascript:void(0);"
+                                            title="">Admin</a></li>
+                                </ul>
+                                <h3 class="mb-0"><a href="blog-detail.html" title="">Kegiatan Ibadah Salat Jumat di
+                                        Masjid Agung An-Nur </a></h3>
+                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisiuam, od mai consectetur
+                                    Aliquam li onsectetur adipisiua odi um dolor sit consectetur adipisiuam.</p>
+                                <a class="thm-btn thm-bg" href="blog-detail.html" title="">Baca
+                                    Lengkap<span></span><span></span><span></span><span></span></a>
+                                <div class="post-share position-relative">
+                                    <i class="fas fa-share"></i>
+                                    <span class="post-share-social position-absolute">
+                                        <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i
+                                                class="fab fa-twitter"></i></a>
+                                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i
+                                                class="fab fa-youtube"></i></a>
+                                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i
+                                                class="fab fa-instagram"></i></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Blog Wrap 2 -->
+                    <div class="view-more mt-50 d-inline-block text-center w-100">
+                        <a class="thm-btn bg-color1" href="blog2.html" title="">Berita
+                            Lainnya<span></span><span></span><span></span><span></span></a>
+                    </div><!-- View More -->
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="w-100 pt-100 thm-layer pb-70 opc8 position-relative">
+                <div class="fixed-bg patern-bg back-blend-multiply thm-bg"
+                    style="background-image: url(assets/images/pattern-bg.jpg);"></div>
+                <div class="container">
+                    <div class="footer-data v2 w-100">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="widget text-center w-100">
+                                    <div class="widget-inner d-inline-block">
+                                        <div class="logo">
+                                            <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid"
+                                                        src="assets/images/logo/logo_annur.png" alt="Logo"
+                                                        srcset="assets/images/logo/logo_annur.png"></a></h1>
+                                        </div>
+                                        <p class="mb-0">Komplek Perkantoran Terpadu Pemerintah Daerah Kabupaten Ogan
+                                            Ilir. Tanjung Senai - Ogan Ilir, Sumatera Selatan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Footer Data -->
+                    <div class="bottom-bar2 text-center w-100">
+                        <p class="mb-0"><a href="index.html" title="Home">Copyright </a> Design & Developed by <a
+                                href="https://diskominfo.oganilirkab.go.id" title="kominfo" target="_blank">Diskominfo -
+                                Ogan Ilir</a></p>
+                    </div><!-- Bottom Bar -->
+                </div>
+            </div>
+        </footer><!-- Footer -->
+    </main><!-- Main Wrapper -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/counterup.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="assets/js/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <!-- <script src="assets/js/particle-int.js"></script> -->
+    <script src="assets/js/musicplayer-min.js"></script>
+    <script src="assets/js/circle-progress.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="assets/js/custom-scripts.js"></script>
+
+    <script>
+        // Nama lokasi
+        const lokasi = "Ogan Ilir, Sumatera Selatan";
+
+        // Ambil jadwal sholat
+        const apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${lokasi}&country=Indonesia&method=2`;
+
+        fetch(apiUrl)
+            .then(res => res.json())
+            .then(data => {
+                // Ambil waktu dari API
+                const waktu = data.data.timings;
+
+                // Urutkan jadwal sesuai urutan yang diminta
+                const jadwalSholat = [{
+                        nama: "Subuh",
+                        waktu: waktu.Fajr.split(" ")[0]
+                    },
+                    {
+                        nama: "Terbit",
+                        waktu: waktu.Sunrise.split(" ")[0]
+                    },
+                    {
+                        nama: "Dzuhur",
+                        waktu: waktu.Dhuhr.split(" ")[0]
+                    },
+                    {
+                        nama: "Asr",
+                        waktu: waktu.Asr.split(" ")[0]
+                    },
+                    {
+                        nama: "Maghrib",
+                        waktu: waktu.Maghrib.split(" ")[0]
+                    },
+                    {
+                        nama: "Isya",
+                        waktu: waktu.Isha.split(" ")[0]
+                    }
+                ];
+
+                // Buat list jadwal dalam <ul> dan <li> sesuai format yang diminta
+                const listHTML = jadwalSholat.map(jadwal => {
+                    return `<li><span>${jadwal.nama}:</span>${jadwal.waktu} WIB</li>`;
+                }).join("");
+
+                // Masukkan jadwal sholat ke dalam <ul>
+                document.getElementById("jadwal").innerHTML = listHTML;
+
+                // Ambil tanggal dari API
+                const dateInfo = data.data.date.gregorian;
+                const tanggalLengkap = `${dateInfo.day} ${dateInfo.month.en} ${dateInfo.year}`;
+
+                // Tampilkan lokasi dan tanggal dari API
+                document.getElementById("tanggal").textContent = `${lokasi}, ${tanggalLengkap}`;
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById("jadwal").innerHTML = "❌ Gagal memuat jadwal.";
+                document.getElementById("tanggal").innerHTML = "❌ Gagal memuat tanggal.";
+            });
+    </script>
+
+    <script>
+        // Daftar bulan dalam bahasa Indonesia
+        const bulanIndo = ["Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        function updateWaktu() {
+            const today = new Date();
+
+            // Ambil data tanggal, bulan, dan tahun
+            const day = today.getDate(); // Tanggal
+            const month = bulanIndo[today.getMonth()]; // Bulan
+            const year = today.getFullYear(); // Tahun
+
+            // Ambil data waktu (jam, menit, detik)
+            let hour = today.getHours();
+            let minute = today.getMinutes();
+            let second = today.getSeconds();
+
+            // Tambahkan angka 0 jika angka jam, menit, atau detik kurang dari 10
+            hour = hour < 10 ? '0' + hour : hour;
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+
+            // Format tanggal dan waktu
+            const tanggal = `${day} ${month} ${year}`;
+            const waktu = `${hour}:${minute}:${second}`;
+
+            // Gabungkan dan tampilkan
+            document.getElementById("realTime").textContent = `Tanggal: ${tanggal} | Waktu: ${waktu}`;
+        }
+
+        // Update waktu setiap detik
+        setInterval(updateWaktu, 1000);
+
+        // Panggil sekali agar waktu tampil langsung
+        updateWaktu();
+    </script>
+
+</body>
+
+</html>
