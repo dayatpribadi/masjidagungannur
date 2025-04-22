@@ -356,7 +356,7 @@
                                                         src="assets/images/galeri/160x130img1.png"
                                                         alt="Event Mini Image 1"></a></div>
                                             <div class="event-info2">
-                                                <h3 class="mb-0"><a href="#" title="">Sholat Subuh Berjamaah & Taklim
+                                                <h3 class="mb-0"><a href="#" title="">Salat Subuh Berjamaah & Taklim
                                                         Subuh</a></h3>
                                                 <ul class="event-meta mb-0 list-unstyled d-inline-flex flex-wrap">
                                                     <li class="thm-clr"><i class="far fa-calendar"></i>19 April 2025 @
@@ -372,7 +372,7 @@
                                                         src="assets/images/galeri/160x130img2.png"
                                                         alt="Event Mini Image 2"></a></div>
                                             <div class="event-info2">
-                                                <h3 class="mb-0"><a href="#" title="">Sholat Subuh Berjamaah & Taklim
+                                                <h3 class="mb-0"><a href="#" title="">Salat Subuh Berjamaah & Taklim
                                                         Subuh</a></h3>
                                                 <ul class="event-meta mb-0 list-unstyled d-inline-flex flex-wrap">
                                                     <li class="thm-clr"><i class="far fa-calendar"></i>12 April 2025 @
@@ -388,7 +388,7 @@
                                                         src="assets/images/galeri/160x130img3.png"
                                                         alt="Event Mini Image 3"></a></div>
                                             <div class="event-info2">
-                                                <h3 class="mb-0"><a href="#" title="">Sholat Idul Fitri 1446H</a></h3>
+                                                <h3 class="mb-0"><a href="#" title="">Salat Idul Fitri 1446H</a></h3>
                                                 <ul class="event-meta mb-0 list-unstyled d-inline-flex flex-wrap">
                                                     <li class="thm-clr"><i class="far fa-calendar"></i>31 Maret 2025 @
                                                         07:00:00</li>
@@ -403,7 +403,7 @@
                                                         src="assets/images/galeri/160x130img4.png"
                                                         alt="Event Mini Image 4"></a></div>
                                             <div class="event-info2">
-                                                <h3 class="mb-0"><a href="#" title="">Sholat Isya & Tarawih</a></h3>
+                                                <h3 class="mb-0"><a href="#" title="">Salat Isya & Tarawih</a></h3>
                                                 <ul class="event-meta mb-0 list-unstyled d-inline-flex flex-wrap">
                                                     <li class="thm-clr"><i class="far fa-calendar"></i>27 Maret 2025 @
                                                         19:30:00</li>
@@ -463,7 +463,7 @@
                             <i class="thm-clr flaticon-rub-el-hizb"></i>
                             <h2 class="mb-0">وَاَقِيْمُوا الصَّلٰوةَ وَاٰتُوا الزَّكٰوةَ وَارْكَعُوْا مَعَ الرّٰكِعِيْنَ
                             </h2>
-                            <p class="mb-0">"Tegakkanlah sholat, tunaikanlah zakat, dan rukuklah beserta orang-orang
+                            <p class="mb-0">"Tegakkanlah Salat, tunaikanlah zakat, dan rukuklah beserta orang-orang
                                 yang rukuk." (QS. Al Baqarah : 43)</p>
                         </div>
                     </div><!-- Monthly Donate Wrap -->
@@ -593,7 +593,7 @@
         // Nama lokasi
         const lokasi = "Ogan Ilir, Sumatera Selatan";
 
-        // Ambil jadwal sholat
+        // Ambil jadwal Salat
         const apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${lokasi}&country=Indonesia&method=2`;
 
         fetch(apiUrl)
@@ -603,7 +603,7 @@
                 const waktu = data.data.timings;
 
                 // Urutkan jadwal sesuai urutan yang diminta
-                const jadwalSholat = [{
+                const jadwalSalat = [{
                         nama: "Subuh",
                         waktu: waktu.Fajr.split(" ")[0]
                     },
@@ -630,11 +630,11 @@
                 ];
 
                 // Buat list jadwal dalam <ul> dan <li> sesuai format yang diminta
-                const listHTML = jadwalSholat.map(jadwal => {
+                const listHTML = jadwalSalat.map(jadwal => {
                     return `<li><span>${jadwal.nama}:</span>${jadwal.waktu} WIB</li>`;
                 }).join("");
 
-                // Masukkan jadwal sholat ke dalam <ul>
+                // Masukkan jadwal Salat ke dalam <ul>
                 document.getElementById("jadwal").innerHTML = listHTML;
 
                 // Ambil tanggal dari API
