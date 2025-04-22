@@ -4402,6 +4402,10 @@ span.proj-loc i {
   position: absolute;
   left: 0;
   width: 3.5rem;
+  background-image: url(../images/annur/quran.png) !important;
+  background-size: cover;
+  background-position: center;
+  border: none !important;
 }
 
 .plyr.v2 .player .timeHolder {
