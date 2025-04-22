@@ -185,20 +185,25 @@
                             <div class="col">
                                 <h1>🕌 Jadwal Salat Kabupaten Ogan Ilir</h1>
                                 <p>Pilih bulan untuk melihat jadwal salat :</p>
-                                <select id="monthSelect" class="form-control mb-4" style="width: 200px;">
-                                    <option value="01">Januari</option>
-                                    <option value="02">Februari</option>
-                                    <option value="03">Maret</option>
-                                    <option value="04">April</option>
-                                    <option value="05">Mei</option>
-                                    <option value="06">Juni</option>
-                                    <option value="07">Juli</option>
-                                    <option value="08">Agustus</option>
-                                    <option value="09">September</option>
-                                    <option value="10">Oktober</option>
-                                    <option value="11">November</option>
-                                    <option value="12">Desember</option>
-                                </select>
+                                <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                                    <select id="monthSelect" class="form-control mb-4" style="width: 200px;">
+                                        <option value="01">Januari</option>
+                                        <option value="02">Februari</option>
+                                        <option value="03">Maret</option>
+                                        <option value="04">April</option>
+                                        <option value="05">Mei</option>
+                                        <option value="06">Juni</option>
+                                        <option value="07">Juli</option>
+                                        <option value="08">Agustus</option>
+                                        <option value="09">September</option>
+                                        <option value="10">Oktober</option>
+                                        <option value="11">November</option>
+                                        <option value="12">Desember</option>
+                                    </select>
+
+                                    <button onclick="exportPDF()">📄 Export PDF</button>
+                                    <div id="judulPDF" style="display: none;"></div>
+                                </div>
 
                                 <div id="jadwalLengkap" class="table-container">
                                     <div class="loading">Memuat jadwal...</div>
@@ -256,6 +261,10 @@
     <script src="assets/js/circle-progress.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="assets/js/custom-scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+
 
 
     <!-- JADWAL SHOLAT HARI INI LETAK NYA DI ATAS -->
@@ -434,6 +443,52 @@
         // Panggil sekali agar waktu tampil langsung
         updateWaktu();
     </script>
+
+    <script>
+        async function exportPDF() {
+            const {
+                jsPDF
+            } = window.jspdf;
+            const doc = new jsPDF('landscape');
+            const lokasi = "Ogan Ilir";
+
+            const bulanNama = [
+                "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+                "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+            ];
+
+            const monthSelect = document.getElementById("monthSelect");
+            const selectedMonthIndex = parseInt(monthSelect.value) - 1;
+            const selectedMonthName = bulanNama[selectedMonthIndex];
+            const tahun = new Date().getFullYear();
+
+            const judul = `Jadwal Sholat ${lokasi}, ${selectedMonthName} ${tahun}`;
+
+            doc.setFontSize(16);
+            doc.text(judul, 14, 15);
+
+            // Ambil data tabel langsung dari DOM
+            const table = document.querySelector("#jadwalLengkap table");
+
+            // Convert HTML table ke AutoTable
+            doc.autoTable({
+                html: table,
+                startY: 25,
+                styles: {
+                    fontSize: 10,
+                    cellPadding: 2
+                },
+                headStyles: {
+                    fillColor: [4, 110, 240]
+                }
+            });
+
+            doc.save(`${judul}.pdf`);
+        }
+    </script>
+
+
+
 
 </body>
 
