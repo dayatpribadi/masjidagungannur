@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Murottal Al-Qur'an</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        ul#playlist {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        ul#playlist li {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Murottal Surah (Random)</h2>
+
+    <ul id="playlist">
+        <li>Memuat surah...</li>
+    </ul>
+
+    <audio id="audio" controls style="display: block; margin: 20px auto; width: 100%; max-width: 600px;"></audio>
+
+    <script>
+        const playlistEl = document.getElementById('playlist');
+        const audioEl = document.getElementById('audio');
+
+        const reciterServer = 'https://server6.mp3quran.net/akdr/';
+        const surahTotal = 114;
+
+        // Fetch list of surah
+        fetch('https://api.alquran.cloud/v1/surah')
+            .then(res => res.json())
+            .then(data => {
+                const allSurahs = data.data;
+
+                function shuffle(arr) {
+                    for (let i = arr.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [arr[i], arr[j]] = [arr[j], arr[i]];
+                    }
+                    return arr;
+                }
+
+                const randomSurahs = shuffle(allSurahs).slice(0, 5);
+                playlistEl.innerHTML = ''; // Kosongkan
+
+                randomSurahs.forEach(surah => {
+                    const surahNum = surah.number.toString().padStart(3, '0');
+                    const audioUrl = `${reciterServer}${surahNum}.mp3`;
+
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+            <span>Surah ${surah.englishName}</span>
+            <div>
+              <button onclick="playAudio('${audioUrl}')">▶️</button>
+              <button onclick="pauseAudio()">⏸️</button>
+              <button onclick="stopAudio()">⏹️</button>
+            </div>
+          `;
+                    playlistEl.appendChild(li);
+                });
+            })
+            .catch(err => {
+                playlistEl.innerHTML = "<li>Gagal memuat surah. Coba lagi nanti.</li>";
+                console.error(err);
+            });
+
+        function playAudio(url) {
+            if (audioEl.src !== url) {
+                audioEl.src = url;
+            }
+            audioEl.play();
+        }
+
+        function pauseAudio() {
+            audioEl.pause();
+        }
+
+        function stopAudio() {
+            audioEl.pause();
+            audioEl.currentTime = 0;
+        }
+    </script>
+
+</body>
+
+</html>

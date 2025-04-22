@@ -205,6 +205,7 @@
                 </div><!-- Featured Area Wrap -->
             </div>
         </section>
+
         <section>
             <div class="w-100 position-relative">
                 <div class="container">
@@ -219,10 +220,9 @@
                                 <div class="plyr-inner position-relative pat-bg white-layer opc9 back-blend-multiply bg-white"
                                     style="background-image: url(assets/images/pattern-bg.jpg);">
                                     <div class="plyr v2 w-100">
-                                        <ul class="playlist mb-0 list-unstyled">
-                                            <li data-cover="assets/images/audio-cover.jpg"
-                                                data-artist="(Abd-ur Rahman)"><a href="assets/audio/surah-fateh.mp3"
-                                                    title="">Surah Fath</a></li>
+                                        <ul class="playlist mb-0 list-unstyled" id="playlist">
+                                            <li>Sedang memuat data surah...</li>
+                                            <!-- Surah akan dimuat dari JS -->
                                         </ul>
                                     </div>
                                 </div>
@@ -690,6 +690,71 @@
 
         // Panggil sekali agar waktu tampil langsung
         updateWaktu();
+    </script>
+
+    <script>
+        const playlistContainer = document.getElementById("playlist");
+        const reciter = {
+            name: "Ibrahim Al-Akdar",
+            server: "https://server6.mp3quran.net/akdr/"
+        };
+
+        // Daftar nama surah
+        const surahNames = [];
+
+        // Ambil daftar surah dari API
+        fetch("https://api.alquran.cloud/v1/surah")
+            .then(res => res.json())
+            .then(data => {
+                data.data.forEach(surah => {
+                    surahNames[surah.number] = surah.englishName;
+                });
+
+                // Buat array 1-114 lalu acak dan ambil 5
+                const allSurahNums = Array.from({
+                    length: 114
+                }, (_, i) => i + 1);
+                shuffle(allSurahNums);
+                const randomSurahs = allSurahNums.slice(0, 5);
+
+                playlistContainer.innerHTML = ""; // Kosongkan isi awal
+
+                randomSurahs.forEach(surahNum => {
+                    const paddedNum = surahNum.toString().padStart(3, '0');
+                    const audioUrl = `${reciter.server}${paddedNum}.mp3`;
+
+                    const li = document.createElement("li");
+                    li.setAttribute("data-cover", "assets/images/audio-cover.jpg");
+                    li.setAttribute("data-artist", `(${reciter.name})`);
+
+                    li.innerHTML = `
+            <a href="${audioUrl}" title="Surah ${surahNames[surahNum]}" onclick="playAudio('${audioUrl}'); return false;">
+              ${surahNames[surahNum]}
+            </a>
+          `;
+
+                    playlistContainer.appendChild(li);
+                });
+            })
+            .catch(err => {
+                playlistContainer.innerHTML = "<li>❌ Gagal memuat murotal</li>";
+                console.error(err);
+            });
+
+        function shuffle(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+        }
+
+        // Buat elemen audio global
+        const audioEl = new Audio();
+
+        function playAudio(url) {
+            audioEl.src = url;
+            audioEl.play();
+        }
     </script>
 
 </body>
