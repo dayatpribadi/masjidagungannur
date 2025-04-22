@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="icon" href="assets/images/favicon.png" sizes="35x35" type="image/png">
+    <title>Masjid An Nur Pemkab Ogan Ilir</title>
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.bootstrap-touchspin.min.css">
+    <link rel="stylesheet" href="assets/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+</head>
+
+<body>
+    <main>
+        <div id="preloader">
+            <div class="preloader-inner">
+                <img src="assets/images/logo/annur_logo.png" alt="">
+            </div>
+        </div><!-- Page Loader -->
+        <header class="stick style2 w-100">
+            <div class="topbar bg-color1 d-flex flex-wrap justify-content-between w-100">
+                <div class="topbar-left">
+                    <ul class="topbar-info-list mb-0 list-unstyled d-inline-flex">
+                        <li><i class="thm-clr far fa-envelope"></i><a href="javascript:void(0);"
+                                title="">info@masjidannuroganilir.com</a></li>
+                        <li><i class="thm-clr fas fa-phone-alt"></i>+62 821 xxx xxxx</li>
+                    </ul>
+                </div>
+                <div class="topbar-right d-inline-flex">
+                    <ul class="topbar-info-list mb-0 list-unstyled d-inline-flex">
+                        <li><i class="thm-clr flaticon-mosque-1"></i>Waktu saat ini: <span class="thm-clr"
+                                id="realTime"></span>
+                        </li>
+                    </ul>
+                    <div class="social-links d-inline-flex">
+                        <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div><!-- Topbar -->
+            <div class="logo-menu-wrap v2 d-flex flex-wrap align-items-center justify-content-between w-100 pat-bg thm-layer opc65 back-blend-multiply thm-bg"
+                style="background-image: url(assets/images/pattern-bg.jpg);">
+                <div class="logo">
+                    <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid"
+                                src="assets/images/logo/logo_annur.png" alt="Logo"
+                                srcset="assets/images/logo/logo_annur.png"></a></h1>
+                </div><!-- Logo -->
+                <nav class="d-flex flex-wrap align-items-center justify-content-between">
+                    <div class="header-left">
+                        <ul class="mb-0 list-unstyled d-inline-flex">
+                            <li><a href="index.html" title="">Beranda</a></li>
+                            <li><a href="about.html" title="">Tentang</a></li>
+                            <li><a href="jadwalsalat.html" title="">Jadwal Salat</a></li>
+                            <li><a href="galeri.html" title="">Galeri</a></li>
+                            <li><a href="contact.html" title="">Kontak</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div><!-- Logo Menu Wrap -->
+        </header><!-- Header -->
+        <div class="sticky-menu">
+            <div class="container">
+                <div class="sticky-menu-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+                    <div class="logo">
+                        <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid"
+                                    src="assets/images/logo/logo_annur.png" alt="Logo"
+                                    srcset="assets/images/logo/logo_annur.png"></a></h1>
+                    </div><!-- Logo -->
+                    <nav class="d-flex flex-wrap align-items-center justify-content-between">
+                        <div class="header-left">
+                            <ul class="mb-0 list-unstyled d-inline-flex">
+                                <li><a href="index.html" title="">Beranda</a></li>
+                                <li><a href="about.html" title="">Tentang</a></li>
+                                <li><a href="jadwalsalat.html" title="">Jadwal Salat</a></li>
+                                <li><a href="galeri.html" title="">Galeri</a></li>
+                                <li><a href="contact.html" title="">Kontak</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div><!-- Sticky Menu -->
+        <div class="rspn-hdr">
+            <div class="rspn-mdbr">
+                <div class="rspn-scil">
+                    <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <form class="rspn-srch">
+                    <input type="text" placeholder="Enter Your Keyword">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="lg-mn">
+                <div class="logo"><a href="index.html" title="Home"><img src="assets/images/logo/logo_annur.png"
+                            alt="Logo"></a>
+                </div>
+                <div class="rspn-cnt">
+                    <span><i class="thm-clr far fa-envelope"></i><a href="javascript:void(0);"
+                            title="">info@youremailid.com</a></span>
+                    <span><i class="thm-clr fas fa-phone-alt"></i>+96 125 554 24 5</span>
+                </div>
+                <span class="rspn-mnu-btn"><i class="fa fa-list-ul"></i></span>
+            </div>
+            <div class="rsnp-mnu">
+                <span class="rspn-mnu-cls"><i class="fa fa-times"></i></span>
+                <ul class="mb-0 list-unstyled w-100">
+                    <li><a href="index.html" title="">Beranda</a></li>
+                    <li><a href="about.html" title="">Tentang</a></li>
+                    <li><a href="jadwalsalat.html" title="">Jadwal Salat</a></li>
+                    <li><a href="galeri.html" title="">Galeri</a></li>
+                    <li><a href="contact.html" title="">Kontak</a></li>
+                </ul>
+            </div><!-- Responsive Menu -->
+        </div><!-- Responsive Header -->
+
+        <section>
+            <div class="w-100 position-relative">
+                <div class="time-wrap2 w-100">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 col-sm-12 col-lg-4">
+                            <div class="time-title w-100">
+                                <h4 class="mb-0">Jadwal Sholat Hari Ini </h4>
+                                <p class="mb-0 thm-clr">
+                                    <span id="tanggal"></span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-lg-8">
+                            <ul class="time-list2 d-flex flex-wrap w-100 mb-0 list-unstyled" id="jadwal">
+                                Memuat...
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- Time Wrap -->
+            </div>
+        </section>
+
+        <section>
+            <div class="w-100 pt-80 black-layer pb-70 opc65 position-relative">
+                <div class="fixed-bg" style="background-image: url(assets/images/masjid_annur_03.jpg)"></div>
+                <div class="container">
+                    <div class="page-title-wrap text-center w-100">
+                        <div class="page-title-inner d-inline-block">
+                            <h1 class="mb-0">Berita</h1>
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="index.html" title="Home">Beranda</a></li>
+                                <li class="breadcrumb-item"><a href="#" title="">Berita</a></li>
+                                <li class="breadcrumb-item active">Masjid Agung An-Nur</li>
+                            </ol>
+                        </div>
+                    </div><!-- Page Title Wrap -->
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="w-100 pt-120 pb-260 position-relative">
+                <div class="container">
+                    <div class="post-detail-wrap w-100">
+                        <div class="row">
+                            <div class="col">
+                                <div class="post-detail-inner w-100">
+                                    <div class="post-detail-img w-100">
+                                        <img class="img-fluid w-100" src="assets/images/masjid_01.jpg"
+                                            alt="Blog Detail Image 1">
+                                    </div>
+                                    <div class="post-detail-info position-relative w-100">
+                                        <div class="post-info2-inner text-center">
+                                            <div class="post-date2">
+                                                <span class="d-block">22</span>
+                                                <i class="d-block thm-bg">April 2025</i>
+                                            </div>
+                                            <div class="post-meta4 w-100">
+                                                <span class="d-block"><i class="far fa-eye"></i>50 Views</span>
+                                                <span class="d-block"><i class="far fa-thumbs-up"></i>23</span>
+                                                <span class="d-block"><i class="far fa-comment"></i>30</span>
+                                            </div>
+                                        </div>
+                                        <ul
+                                            class="post-meta2 d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
+                                            <li class="thm-clr">Tanjung Senai, Ogan Ilir</li>
+                                            <li class="thm-clr"><img class="img-fluid rounded-circle"
+                                                    src="assets/images/resources/post-author-thumb1-1.jpg"
+                                                    alt="Post Author Thumb 1">Oleh: <a href="javascript:void(0);"
+                                                    title="">Admin</a></li>
+                                        </ul>
+                                        <h2 class="mb-0">Detail Berita Masji Agung An-Nur</h2>
+                                        <p class="mb-3 text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                            elit. Assumenda modi blanditiis pariatur deleniti? Enim placeat, molestias
+                                            ab non accusantium eligendi vero officia nulla aperiam, nam suscipit quae
+                                            nihil unde fuga numquam debitis beatae. Laboriosam officiis ipsum
+                                            accusantium, delectus nisi provident, officia exercitationem cumque hic
+                                            cupiditate at rem corporis. Doloremque aspernatur voluptatibus repudiandae
+                                            at minima, quos alias fuga deleniti esse sed porro dicta reprehenderit
+                                            molestiae pariatur officia adipisci consequatur placeat repellat. Mollitia,
+                                            fugit obcaecati! Repudiandae quis quisquam temporibus. Placeat distinctio
+                                            libero fuga enim possimus ducimus, explicabo aperiam quos eveniet
+                                            perspiciatis, officiis, accusantium ullam cumque dignissimos nam vel minima
+                                            tenetur recusandae! Facere, tempora sit provident eum expedita repudiandae
+                                            doloribus consequatur numquam aperiam. Facere aspernatur blanditiis eum
+                                            expedita, repellendus sapiente reiciendis illo? Quibusdam asperiores dolorem
+                                            eaque praesentium fugiat sint magnam ipsam! Illo minus, ducimus numquam aut,
+                                            consectetur natus et suscipit voluptatum error omnis consequatur
+                                            consequuntur dolorum quasi sit facilis. Consectetur debitis, autem
+                                            praesentium doloremque totam facere maiores dolor exercitationem dicta
+                                            laudantium ipsa qui, fuga dignissimos minima, eligendi quia! Earum, impedit
+                                            aliquid. Quae similique esse, et laudantium consequuntur ex eum alias non
+                                            amet magnam odit, dolor eos aliquam excepturi! Assumenda nemo at dolorem
+                                            provident alias possimus, maiores cupiditate aliquid dolorum, vel delectus
+                                            consequatur non.</p>
+
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, non? Unde,
+                                            odio dolore. Quae facere, odit magnam velit inventore quis laudantium
+                                            obcaecati cum aut similique laborum eius consequuntur sunt expedita maxime
+                                            accusantium laboriosam neque alias cumque officia molestias. Sequi ratione
+                                            corporis quaerat iste in. Sed nostrum fuga hic repellendus qui aspernatur
+                                            consequatur vel animi. Consectetur necessitatibus eveniet voluptates
+                                            quibusdam officia voluptatibus sint! Ducimus ea ipsam quae quidem dolor
+                                            earum sapiente eum deserunt rem doloribus quo repellat, dolorum corporis
+                                            labore veritatis, vero consectetur dolorem commodi aperiam cupiditate ex?
+                                            Adipisci accusantium molestias, hic nulla libero fuga velit perferendis in?
+                                            Possimus, ut eaque.</p>
+                                    </div>
+                                    <div class="share-tags-wrap d-flex flex-wrap w-100">
+                                        <div class="share-links d-inline-flex">
+                                            <span class="d-inline-block">Share This:</span>
+                                            <div class="social-links4 v2 text-center d-inline-flex">
+                                                <a href="https://www.tumblr.com/" title="Tumblr" target="_blank"><i
+                                                        class="fab fa-tumblr"></i></a>
+                                                <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i
+                                                        class="fab fa-facebook-f"></i></a>
+                                                <a href="https://twitter.com/" title="Twitter" target="_blank"><i
+                                                        class="fab fa-twitter"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="tags-links d-inline-flex">
+                                            <span class="d-inline-block">Tags:</span>
+                                            <a href="javascript:void(0);" title="">Masjid</a>,
+                                            <a href="javascript:void(0);" title="">Tempat Ibadah</a>,
+                                            <a href="javascript:void(0);" title="">Keagamaan</a>
+                                        </div>
+                                    </div><!-- Share & Tags Wrap -->
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Post Detail Wrap -->
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="w-100 pt-100 thm-layer pb-70 opc8 position-relative">
+                <div class="fixed-bg patern-bg back-blend-multiply thm-bg"
+                    style="background-image: url(assets/images/pattern-bg.jpg);"></div>
+                <div class="container">
+                    <div class="footer-data v2 w-100">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12">
+                                <div class="widget text-center w-100">
+                                    <div class="widget-inner d-inline-block">
+                                        <div class="logo">
+                                            <h1 class="mb-0"><a href="index.html" title="Home"><img class="img-fluid"
+                                                        src="assets/images/logo/logo_annur.png" alt="Logo"
+                                                        srcset="assets/images/logo/logo_annur.png"></a></h1>
+                                        </div>
+                                        <p class="mb-0">Komplek Perkantoran Terpadu Pemerintah Daerah Kabupaten Ogan
+                                            Ilir. Tanjung Senai - Ogan Ilir, Sumatera Selatan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- Footer Data -->
+                    <div class="bottom-bar2 text-center w-100">
+                        <p class="mb-0"><a href="index.html" title="Home">Copyright </a> Design & Developed by <a
+                                href="https://diskominfo.oganilirkab.go.id" title="kominfo" target="_blank">Diskominfo -
+                                Ogan Ilir</a></p>
+                    </div><!-- Bottom Bar -->
+                </div>
+            </div>
+        </footer><!-- Footer -->
+    </main><!-- Main Wrapper -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/counterup.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="assets/js/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <!-- <script src="assets/js/particle-int.js"></script> -->
+    <script src="assets/js/musicplayer-min.js"></script>
+    <script src="assets/js/circle-progress.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="assets/js/custom-scripts.js"></script>
+
+    <script>
+        // Nama lokasi
+        const lokasi = "Ogan Ilir, Sumatera Selatan";
+
+        // Ambil jadwal sholat
+        const apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${lokasi}&country=Indonesia&method=2`;
+
+        fetch(apiUrl)
+            .then(res => res.json())
+            .then(data => {
+                // Ambil waktu dari API
+                const waktu = data.data.timings;
+
+                // Urutkan jadwal sesuai urutan yang diminta
+                const jadwalSholat = [{
+                        nama: "Subuh",
+                        waktu: waktu.Fajr.split(" ")[0]
+                    },
+                    {
+                        nama: "Terbit",
+                        waktu: waktu.Sunrise.split(" ")[0]
+                    },
+                    {
+                        nama: "Dzuhur",
+                        waktu: waktu.Dhuhr.split(" ")[0]
+                    },
+                    {
+                        nama: "Asr",
+                        waktu: waktu.Asr.split(" ")[0]
+                    },
+                    {
+                        nama: "Maghrib",
+                        waktu: waktu.Maghrib.split(" ")[0]
+                    },
+                    {
+                        nama: "Isya",
+                        waktu: waktu.Isha.split(" ")[0]
+                    }
+                ];
+
+                // Buat list jadwal dalam <ul> dan <li> sesuai format yang diminta
+                const listHTML = jadwalSholat.map(jadwal => {
+                    return `<li><span>${jadwal.nama}:</span>${jadwal.waktu} WIB</li>`;
+                }).join("");
+
+                // Masukkan jadwal sholat ke dalam <ul>
+                document.getElementById("jadwal").innerHTML = listHTML;
+
+                // Ambil tanggal dari API
+                const dateInfo = data.data.date.gregorian;
+                const tanggalLengkap = `${dateInfo.day} ${dateInfo.month.en} ${dateInfo.year}`;
+
+                // Tampilkan lokasi dan tanggal dari API
+                document.getElementById("tanggal").textContent = `${lokasi}, ${tanggalLengkap}`;
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById("jadwal").innerHTML = "❌ Gagal memuat jadwal.";
+                document.getElementById("tanggal").innerHTML = "❌ Gagal memuat tanggal.";
+            });
+    </script>
+
+
+    <script>
+        // Daftar bulan dalam bahasa Indonesia
+        const bulanIndo = ["Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        function updateWaktu() {
+            const today = new Date();
+
+            // Ambil data tanggal, bulan, dan tahun
+            const day = today.getDate(); // Tanggal
+            const month = bulanIndo[today.getMonth()]; // Bulan
+            const year = today.getFullYear(); // Tahun
+
+            // Ambil data waktu (jam, menit, detik)
+            let hour = today.getHours();
+            let minute = today.getMinutes();
+            let second = today.getSeconds();
+
+            // Tambahkan angka 0 jika angka jam, menit, atau detik kurang dari 10
+            hour = hour < 10 ? '0' + hour : hour;
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+
+            // Format tanggal dan waktu
+            const tanggal = `${day} ${month} ${year}`;
+            const waktu = `${hour}:${minute}:${second}`;
+
+            // Gabungkan dan tampilkan
+            document.getElementById("realTime").textContent = `Tanggal: ${tanggal} | Waktu: ${waktu}`;
+        }
+
+        // Update waktu setiap detik
+        setInterval(updateWaktu, 1000);
+
+        // Panggil sekali agar waktu tampil langsung
+        updateWaktu();
+    </script>
+
+
+</body>
+
+</html>
