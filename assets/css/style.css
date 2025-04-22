@@ -1971,7 +1971,7 @@ a.play-btn:hover svg .stroke-dotted {
   bottom: 0;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid;
+  border: 2px solid #b78b61;
   -webkit-animation: rotate 5s infinite linear;
   -ms-animation: rotate 5s infinite linear;
   -o-animation: rotate 5s infinite linear;
