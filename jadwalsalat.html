@@ -144,7 +144,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-12 col-sm-12 col-lg-4">
                             <div class="time-title w-100">
-                                <h4 class="mb-0">Jadwal Sholat Hari Ini </h4>
+                                <h4 class="mb-0">Jadwal salat Hari Ini </h4>
                                 <p class="mb-0 thm-clr">
                                     <span id="tanggal"></span></p>
                             </div>
@@ -168,7 +168,7 @@
                             <h1 class="mb-0">Jadwal Salat</h1>
                             <ol class="breadcrumb mb-0">
                                 <li class="breadcrumb-item"><a href="index.html" title="Home">Beranda</a></li>
-                                <li class="breadcrumb-item"><a href="#" title="">Jadwal Sholat</a></li>
+                                <li class="breadcrumb-item"><a href="#" title="">Jadwal salat</a></li>
                                 <li class="breadcrumb-item active">Masjid Agung An-Nur</li>
                             </ol>
                         </div>
@@ -254,12 +254,12 @@
 
 
 
-    <!-- JADWAL SHOLAT HARI INI LETAK NYA DI ATAS -->
+    <!-- JADWAL salat HARI INI LETAK NYA DI ATAS -->
     <script>
         // Nama lokasi
         const lokasi = "Ogan Ilir, Sumatera Selatan";
 
-        // Ambil jadwal sholat
+        // Ambil jadwal salat
         const apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${lokasi}&country=Indonesia&method=2`;
 
         fetch(apiUrl)
@@ -269,7 +269,7 @@
                 const waktu = data.data.timings;
 
                 // Urutkan jadwal sesuai urutan yang diminta
-                const jadwalSholat = [{
+                const jadwalsalat = [{
                         nama: "Subuh",
                         waktu: waktu.Fajr.split(" ")[0]
                     },
@@ -296,11 +296,11 @@
                 ];
 
                 // Buat list jadwal dalam <ul> dan <li> sesuai format yang diminta
-                const listHTML = jadwalSholat.map(jadwal => {
+                const listHTML = jadwalsalat.map(jadwal => {
                     return `<li><span>${jadwal.nama}:</span>${jadwal.waktu} WIB</li>`;
                 }).join("");
 
-                // Masukkan jadwal sholat ke dalam <ul>
+                // Masukkan jadwal salat ke dalam <ul>
                 document.getElementById("jadwal").innerHTML = listHTML;
 
                 // Ambil tanggal dari API
@@ -319,7 +319,7 @@
 
     <!-- JADWAL LENGKAP -->
     <script>
-        function loadJadwalSholat(month) {
+        function loadJadwalsalat(month) {
             const year = new Date().getFullYear();
             const city = "Ogan Ilir";
             const country = "Indonesia";
@@ -383,12 +383,12 @@
         }
 
         // Muat data saat halaman dibuka
-        loadJadwalSholat(new Date().getMonth() + 1);
+        loadJadwalsalat(new Date().getMonth() + 1);
 
         // Ganti bulan
         document.getElementById("monthSelect").addEventListener("change", function () {
             const selectedMonth = this.value;
-            loadJadwalSholat(selectedMonth);
+            loadJadwalsalat(selectedMonth);
         });
 
         const bulanNama = [
@@ -465,7 +465,7 @@
             const selectedMonthName = bulanNama[selectedMonthIndex];
             const tahun = new Date().getFullYear();
 
-            const judul = `Jadwal Sholat ${lokasi}, ${selectedMonthName} ${tahun}`;
+            const judul = `Jadwal salat ${lokasi}, ${selectedMonthName} ${tahun}`;
 
             doc.setFontSize(16);
             doc.text(judul, 14, 15);
