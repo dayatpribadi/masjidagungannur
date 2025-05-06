@@ -2394,7 +2394,9 @@ header.style2 .topbar {
 .thm-bg nav>div>ul>li>a:focus,
 .thm-layer nav>div>ul>li.active>a,
 .thm-bg nav>div>ul>li.active>a {
-  color: #222;
+  /* color: #222; */
+  color: #fff;
+  font-weight: bold;
 }
 
 /*=== Header Style 3 ===*/
